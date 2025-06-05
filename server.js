@@ -55,7 +55,7 @@ app.post('/send-franchise-details', (req, res) => {
     from: process.env.GMAIL_USER,
     to: 'rocketcarwashsocialmedia@gmail.com',
     subject: 'New Franchise Application Received',
-    text: `New Franchise Application Details:\n\nName: ${name}\nAddress: ${address}\nDistrict: ${district}\nState: ${state}\nEmail: ${email}\nPhone: ${phone}`,
+    text: `New Franchise Application Received\n\nName: ${name}\nAddress: ${address}\nDistrict: ${district}\nState: ${state}\nEmail: ${email}\nPhone: ${phone}`,
   };
 
   transporter.sendMail(userMailOptions, (error, info) => {
